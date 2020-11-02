@@ -75,4 +75,4 @@ mensaje = conv(entrada)
 checkS = check(mensaje)
 mensaje += checkS
 cifrado = md2(mensaje, digesto)
-print(upper(cifrado))
+print(cifrado.upper())
