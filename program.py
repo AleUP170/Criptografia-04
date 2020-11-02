@@ -59,7 +59,7 @@ def md2(mensaje, digesto):
             t = (t+j)%256
     res = ""
     for x in digesto[0:16]:
-        res += '{:02X}'.format(x)
+        res += '{:02x}'.format(x)
     return res
 
 
@@ -75,4 +75,4 @@ mensaje = conv(entrada)
 checkS = check(mensaje)
 mensaje += checkS
 cifrado = md2(mensaje, digesto)
-print(cifrado.upper())
+print(cifrado)
