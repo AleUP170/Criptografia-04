@@ -29,9 +29,8 @@ S = [
 def conv(entrada):
     hexa = [ord(c) for c in entrada]
     paddingVal = (16 - (len(hexa) % 16))
-    if paddingVal != 16 or len(entrada) == 0:
-        padding = paddingVal * [paddingVal]
-        hexa += padding
+    padding = paddingVal * [paddingVal]
+    hexa += padding
     return hexa 
 
 def check(mensaje):
@@ -76,4 +75,4 @@ mensaje = conv(entrada)
 checkS = check(mensaje)
 mensaje += checkS
 cifrado = md2(mensaje, digesto)
-print(cifrado)
+print(upper(cifrado))
