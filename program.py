@@ -66,6 +66,8 @@ def md2(mensaje, digesto):
 
 # Obtener las llaves y texto plano, limpiando el input
 entrada = lines[0].replace("\n","")
+if entrada == '""':
+    entrada = ""
 
 # Inicializar digesto
 digesto = 48*[0]
